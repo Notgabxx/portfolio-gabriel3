@@ -1,0 +1,208 @@
+
+
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1rem;              /* unidade relativa: acompanha a fonte do navegador */
+  line-height: 1.6;
+  color: #3b2f2a;               /* cor de texto do corpo */
+  background-color: #faf6ef;    /* fundo geral da página */
+  margin: 0;
+}
+
+/* ---------- Cabeçalho (cores da seção 1) ---------- */
+header.cabecalho {
+  background-color: #5b3a29;    /* fundo marrom do cabeçalho */
+  color: #ffffff;               /* texto branco */
+  padding: 1.5rem 5%;
+  border-bottom: 4px solid #c9a06a;
+}
+
+header.cabecalho h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0 0 0.75rem;
+}
+
+/* ---------- Menu com Flexbox ---------- */
+nav.menu ul {
+  list-style: none;
+  display: flex;                /* requisito: layout com Flexbox */
+  flex-wrap: wrap;              /* permite o menu dobrar em telas pequenas */
+  gap: 0.5rem 1.25rem;
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------- Estilização de links (normal + :hover) ---------- */
+nav.menu a {
+  color: #f5e2c8;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid transparent;   /* box model no link */
+  transition: background-color 0.2s, color 0.2s;
+}
+
+nav.menu a:hover {
+  background-color: #f5e2c8;
+  color: #5b3a29;
+  border: 1px solid #c9a06a;
+  text-decoration: none;
+}
+
+/* ---------- Conteúdo central com max-width (responsividade) ---------- */
+main.conteudo {
+  max-width: 60rem;             /* limite de largura em telas grandes */
+  width: 90%;                   /* unidade relativa: encosta nas bordas em telas pequenas */
+  margin: 2rem auto;            /* box model: margens para espaçar */
+}
+
+/* ---------- Seções/blocos ---------- */
+section.bloco,
+article.bloco {
+  background-color: #ffffff;
+  border: 1px solid #e0d3bd;    /* box model: borda de destaque */
+  padding: 1.25rem 1.5rem;      /* box model: espaçamento interno */
+  margin-bottom: 1.5rem;        /* box model: espaçamento externo */
+  border-radius: 0.5rem;
+}
+
+/* ---------- Títulos de seção ---------- */
+h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #5b3a29;
+  margin-top: 0;
+  border-bottom: 2px solid #efe0c8;
+  padding-bottom: 0.5rem;
+}
+
+p {
+  font-size: 1rem;
+  margin: 0.75rem 0;
+}
+
+strong { font-weight: bold; }
+em { font-style: italic; }
+
+/* ---------- Classe de destaque (seção com cores próprias) ---------- */
+section.destaque {
+  background-color: #f3e9d8;    /* segunda seção com cor/fundo diferentes */
+  color: #4a3826;
+  border-left: 6px solid #c9a06a;
+}
+
+/* ---------- ID único: card de projetos/objetivos ---------- */
+#projetos,
+#objetivos {
+  background-color: #fffdf7;
+  border: 2px dashed #c9a06a;   /* box model com borda mais forte no card */
+}
+
+/* ---------- Tabela ---------- */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.95rem;
+}
+
+caption {
+  font-weight: bold;
+  padding: 0.5rem 0;
+  text-align: left;
+  color: #5b3a29;
+}
+
+th,
+td {
+  border: 1px solid #c9b79a;
+  padding: 0.5rem 0.75rem;      /* box model na tabela */
+  text-align: left;
+}
+
+thead th {
+  background-color: #efe0c8;
+  color: #3b2f2a;
+}
+
+tfoot td {
+  background-color: #faf6ef;
+  font-size: 0.85rem;
+}
+
+/* ---------- Listas ---------- */
+ol.lista-projetos,
+ul.lista-cursos {
+  padding-left: 1.25rem;
+}
+
+ol.lista-projetos li,
+ul.lista-cursos li {
+  margin-bottom: 0.5rem;
+}
+
+/* ---------- Galeria de fotos com Flexbox ---------- */
+div.galeria {
+  display: flex;                /* Flexbox organizando as fotos */
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+figure.foto {
+  margin: 0;
+  padding: 0.75rem;
+  border: 1px solid #c9b79a;
+  border-radius: 0.5rem;
+  background-color: #ffffff;
+  max-width: 100%;
+}
+
+figure.foto img {
+  max-width: 100%;              /* imagem nunca "estoura" o card em telas pequenas */
+  height: auto;
+  display: block;
+  border: 1px solid #c9b79a;
+}
+
+figure.foto figcaption {
+  font-size: 0.85rem;
+  color: #7a6a58;
+  text-align: center;
+  padding-top: 0.5rem;
+}
+
+/* ---------- Links auxiliares ---------- */
+a.voltar-topo {
+  color: #8a5a2b;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+a.voltar-topo:hover {
+  color: #5b3a29;
+}
+
+/* ---------- Rodapé (cores da seção 2) ---------- */
+footer.rodape {
+  background-color: #5b3a29;
+  color: #f5e2c8;
+  text-align: center;
+  padding: 1rem 5%;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
+/* ---------- Responsividade extra ---------- */
+@media (max-width: 480px) {
+  header.cabecalho h1 {
+    font-size: 1.5rem;          /* título menor em celulares */
+  }
+
+  nav.menu ul {
+    flex-direction: column;     /* menu vira coluna em telas bem estreitas */
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+}
