@@ -206,3 +206,17 @@ footer.rodape {
     font-size: 1.25rem;
   }
 }
+
+/* ---------- Página inicial: apresentação com foto ---------- */
+section.apresentacao {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+figure.foto-perfil img {
+  border-radius: 50%;
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
+}
