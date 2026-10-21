@@ -220,3 +220,22 @@ figure.foto-perfil img {
   object-fit: cover;
   aspect-ratio: 1 / 1;
 }
+
+/* ---------- Cards de projetos ---------- */
+article.card-projeto {
+  border-left: 4px solid #c9a06a;
+}
+
+a.link-repo {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  background-color: #5b3a29;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+a.link-repo:hover {
+  background-color: #c9a06a;
+  color: #3b2f2a;
+}
