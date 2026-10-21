@@ -239,3 +239,14 @@ a.link-repo:hover {
   background-color: #c9a06a;
   color: #3b2f2a;
 }
+
+/* ---------- Contato ---------- */
+ul.lista-contato {
+  list-style: none;
+  padding: 0;
+}
+
+ul.lista-contato li {
+  margin-bottom: 0.5rem;
+  overflow-wrap: anywhere;   /* e-mail longo não estoura em tela pequena */
+}
